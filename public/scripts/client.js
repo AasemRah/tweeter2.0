@@ -30,6 +30,12 @@ const data = [];
   //  }
   //];
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -57,7 +63,7 @@ const createTweetElement = function (tweetData){
           </div>
         </header>
         <div class="tweet-text">
-          ${tweetData.content.text}
+          ${escape(tweetData.content.text)}
         </div>
         <footer class="tweet-footer">
           <span class="tweet-date">${timeago.format(tweetData.created_at)}</span>
@@ -72,8 +78,7 @@ const createTweetElement = function (tweetData){
   };
 
   const loadTweets = function() {
-    $.ajax("/tweets/", {method: "GET", dataType: "json",})
-    .then((newTweet) => {
+    $.get("/tweets/", function(newTweet){
       renderTweets(newTweet.reverse());
     });
   };
