@@ -19,3 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+![typing-tweet](https://github.com/AasemRah/tweeter2.0/assets/132394986/e68936b9-79b2-407b-b20c-a559f83f8cfe)
+
+![uploading-tweet](https://github.com/AasemRah/tweeter2.0/assets/132394986/e9f5a60e-9dfb-4746-952b-176d12937bb6)
