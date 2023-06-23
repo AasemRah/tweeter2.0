@@ -1,5 +1,5 @@
 nav{
-height: 120px;
+  height: 100px;
   width: 100%;
   background-color: #4056A1;
   font-size: 50px;
@@ -8,30 +8,46 @@ height: 120px;
   display: flex;
   justify-content: space-between;
   position: fixed;  
-  z-index: 1;
+  z-index: 3;
   top: 0;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
 
 
-.a {
+.logo{
   display: flex;
-  flex-wrap: wrap;
-  font-family: 'Bungee', sans-serif;
   justify-content: center;
   flex-direction: column;
-
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.7rem;
+  flex-wrap: wrap;
+  text-align: end;
 }
 
-.b {
-  display: flex;
-  font-family: sans-serif;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  font-weight: 400;
-  font-size: 24px;
-  align-items: center;
+span.write-new-tweet{
+  font-family: "Arial Bold", sans-serif;
+  font-size: 1rem;
+  }
+
+div.write-tweet {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+@media only screen and (min-width: 1024px)  {
+  nav {
+    height: 120px;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  span.write-new-tweet {
+    font-size: 1.45rem;
+  }
 }

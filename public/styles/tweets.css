@@ -1,4 +1,4 @@
-section#tweet-container {
+#tweets-container {
   display:flex;
   flex-direction: column;
   background-color:#f4f1ec;
@@ -28,11 +28,11 @@ section#tweet-container {
   align-items: flex-end;
 }
 
-article.tweet img {
+.tweet img {
   margin-left: 12px;
   margin-right: 12px;
-  max-width: 85px;
-  max-height: 85px;
+  max-width: 80px;
+  max-height: 80px;
   height: auto;
   width: auto;
 }
@@ -46,7 +46,7 @@ article.tweet img {
   padding: 8px;
 }
 
-article.tweet:hover {
+.tweet:hover{
   box-shadow: 10px 10px #C8C8C8;
 }
 
@@ -56,16 +56,22 @@ article.tweet:hover {
   flex-direction: row;
   justify-content: space-between;
   border-width: 2.5px;
-  padding: 8px;
+  padding-top: 20px;
   margin-top: 9px;
   font-size: 16px;
 }
 
 .tweet-response i {
-  padding: 7px;
+  padding: 6px;
   color: #4056A1;
 }
 
 .tweet-response i:hover {
   color: rgb(223, 215, 115);
 }
+
+@media only screen and (min-width: 1024px) {
+  #tweets-container {
+      width: 100%;
+    }
+  }

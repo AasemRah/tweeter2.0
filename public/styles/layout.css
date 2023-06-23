@@ -18,16 +18,38 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: source sans 3, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  font-weight: 400;
 }
 
 main{
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #f4f1ec;
+  font-family: sans-serif;
+  padding-top: 20px;
 
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  
+  main {
+    background-color: #f4f1ec;
+    width: 200%;
+    margin-top: 125px;
+    margin-right: 55px;
+    margin-left: 35px;
+  }
 }
 
 /*

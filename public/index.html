@@ -4,80 +4,97 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+/>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
-    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" 
-    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
+
+
+  <!--Page Content-->
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top navigation bar (fixed) -->
     <nav>
-      <span class="a"> tweeter</span>
-      <span class="b">Write a new tweet<i class="fas fa-angle-double-down" style= "color: red"></i>
+      <span class="logo">Tweeter</span>
+      <div class="write-tweet">
+        <span class="write-new-tweet"><strong>Write</strong> a new tweet</span>
+      <i class="fas fa-angle-double-down" style= "color: red"></i>
+      </div>
     </nav>
 
+    <!-- Header-->
     <header class="profile-header">
       <div class="user-image">
-          <img src="/images/profile-hex.png"> 
+          <img class="user-image" src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="user-name">
-          <h2><b>Rick</b> Morty</h2>
+          <h2>Aasem Rahuma</h2>
       </div>
-  </header>
-
-    <main class="main-container">
+    </header>
 
     <!-- Page-specific (main) content here -->
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="post" id="new-tweet-form">
-          <textarea name="text" id="tweet-text" placeholder="What Are You Humming About?"> </textarea>
-          <div>
-            <button id="submit"  type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweet-container"></section>
-      </main>
+    <main class="main-container">
+
+      
+      <!--HTML for creating new tweet-->
+    <section class="new-tweet">
+      <h2 class="new-tweet-header">Compose Tweet</h2>
+      <span id="error-message-empty" class="error-message-box">
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+        Please enter text before submitting a new Tweet!
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+      </span>
+      <span id="error-message-too-Long" class="error-message-box">
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+        Please reduce your tweet content to less than or equal to 140 characters!
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+      </span>
+      <form action="/tweets" method="POST" id="new-tweet-form">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div class="new-tweet-footer">
+          <button id="submit" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    
+    <!--HTML for displaying created tweets, rendered in client.js-->
+    <section id="tweets-container"></section>
+</main>
   </body>
-</html>
+  </html>
